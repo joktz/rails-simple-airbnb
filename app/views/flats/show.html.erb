@@ -13,8 +13,9 @@
       <i class="fa-solid fa-euro-sign"></i> <%= @flat.price_per_night %>
     </p>
   </div>
-  <div>
-    <%= link_to "Edit this flat", edit_flat_path(@flat), class: "btn btn-warning mb-4" %>
+  <div class="mt-3 mb-3">
+    <%= link_to "Edit this flat", edit_flat_path(@flat), class: "btn btn-warning" %>
+    <%= link_to "Delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
   </div>
   <div>
     <%= link_to "Home", flats_path, class: "btn btn-primary"%>

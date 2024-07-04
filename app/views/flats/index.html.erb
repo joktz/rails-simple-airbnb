@@ -18,7 +18,7 @@
       <div class="col-4 mb-4">
         <div class="flat-card">
           <div class="card-image">
-            <img src="<% flat.image_url %>" alt="image" class="img-fluid" />
+            <img src="<%= flat.image_url %>" alt="image" class="img-fluid" />
           </div>
           <div class="card-body">
             <h4> <%= flat.name %> </h4>
@@ -30,6 +30,7 @@
             <div class="mt-3">
               <%= link_to "Details", flat_path(flat), class: "btn btn-primary" %>
               <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-warning" %>
+              <%= link_to "Delete", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
             </div>
           </div>
         </div>

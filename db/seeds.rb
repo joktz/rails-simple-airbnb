@@ -24,6 +24,6 @@ Flat.create!(
     description: Faker::Lorem.sentence,
     price_per_night: Faker::Commerce.price(range: 0..1000),
     number_of_guests: rand(1..10),
-    image_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['apartmet'])
+    image_url: Faker::LoremFlickr.image(size: "250x250", search_terms: ['apartment'])
   )
 end
